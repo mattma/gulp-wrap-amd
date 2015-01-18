@@ -19,13 +19,15 @@
     "node": ">= 0.10"
   },
   "scripts": {
-    "test": "gulp jshint && tap ./test/*.js",
+    "test": "gulp jshint && ./node_modules/lab/bin/lab -cv -m 5000 ./test/*.js",
     "compile": "lodash template=./templates/*.jst exports=node -o template.js -d"
   },
   "devDependencies": {
-    "tap": "~0.4.6",
-    "lodash-cli": "~2.4.1",
+    "code": "^1.2.1",
     "gulp": "~3.8.6",
-    "gulp-jshint": "~1.7.1"
+    "gulp-jshint": "~1.7.1",
+    "lab": "^5.2.0",
+    "lodash-cli": "~2.4.1",
+    "tap": "~0.4.6"
   }
 }
